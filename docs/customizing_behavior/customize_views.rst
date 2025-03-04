@@ -33,7 +33,7 @@ For example, you can restrict :term:`passkey` registration by modifying the code
     class MyCustomBeginCredentialRegistrationView(BaseBeginCredentialRegistration):
     	def check_can_register(self):
     		user = self.get_user()
-    		
+
     # Perform some checks that may stop a user from registering
     # and raise a Django Rest Framework API error
     	if your_function_that_does_something(user)...:

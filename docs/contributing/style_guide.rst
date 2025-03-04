@@ -244,9 +244,9 @@ You can choose to use either grid tables or simple tables. Each type has its own
 1. **Grid tables:** Grid tables give you full control over the layout and structure of your table. You create them by manually drawing the cell grid using characters like **+**, **-**, and **|**.
 
     Here’s an example of a grid table:
-    
+
     .. code-block:: rst
-    
+
         +-----------------+-----------------+
         | Header 1        | Header 2        |
         +=================+=================+
@@ -258,9 +258,9 @@ You can choose to use either grid tables or simple tables. Each type has its own
 2. **Simple tables:** Simple tables are easier to create but come with some limitations. They require at least two rows, and the cells in the first column cannot span multiple lines.
 
     Here’s an example of a simple table:
-    
+
     .. code-block:: rst
-    
+
         ===============  ===============
         Header 1         Header 2
         ===============  ===============

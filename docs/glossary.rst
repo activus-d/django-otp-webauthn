@@ -11,18 +11,18 @@ Glossary
 
     cryptography
         The practice of securing data through encryption and digital signatures. In the context of WebAuthn, cryptography ensures that authentication is secure and resistant to attacks.
-    
+
     discoverable credential
         An alternative term for a passkey or resident key. It refers to a WebAuthn credential that allows authentication without the server providing credential IDs.
 
     key pair
         A public-private pair of cryptographic keys used for secure communication and authentication. The public key can be shared freely, while the private key is kept secret and used to decrypt data or create a digital signature.
-        
+
         The two keys are mathematically linked. So data encrypted with the public key can only be decrypted by the corresponding private key, and vice versa. This ensures secure interactions without needing to share the private key.
 
     passkey
         A type of WebAuthn credential that supports passwordless logins in scenarios where the server has not first identified the user and has not provided the web browser with credential IDs.
-        
+
         While passkeys are WebAuthn credentials, WebAuthn credentials are not always passkeys.
 
     private key
@@ -45,11 +45,11 @@ Glossary
 
     web authentication
         This is an open web standard developed by the World Wide Web Consortium (W3C). It describes an authentication standard that enables websites to negotiate the creation of public-key-based credentials with a browser
-        
+
     WebAuthn
         A shorthand term for web authentication standard. In this package, some classes include WebAuthn in their names, but the term itself refers to the broader web authentication standard.
 
     WebAuthn credential
         A term defined in the Web Authentication specification. It's a key-based credential generated during a WebAuthn registration process, consisting of a public-private :term:`key pair`. The private key is securely stored on the user's device, while the public key is stored on the server for verifying future authentications.
-        
+
         This should not be confused with the WebAuthnCredential model, which only stores the public key and associated metadata.

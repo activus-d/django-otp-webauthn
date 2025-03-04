@@ -21,10 +21,10 @@ To create custom models, define a credential model that inherits from ``Abstract
 
     from django.db import models
     from django_otp_webauthn.models import AbstractWebAuthnAttestation, AbstractWebAuthnCredential
-    
+
     class MyCredential(AbstractWebAuthnCredential):
         pass
-    
+
     class MyAttestation(AbstractWebAuthnAttestation):
         credential = models.OneToOneField(
             MyCredential,
@@ -39,7 +39,7 @@ You can also override the attestation model without modifying the default creden
 
     from django.db import models
     from django_otp_webauthn.models import AbstractWebAuthnAttestation
-    
+
     class MyAttestation(AbstractWebAuthnAttestation):
         credential=models.OneToOneField("otp_webauthn.    WebAuthnCredential", on_delete=models.CASCADE,     related_name="swapped_attestation", editable=False)
 

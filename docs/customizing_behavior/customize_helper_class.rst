@@ -18,7 +18,7 @@ To customize the WebAuthn helper class, follow these steps:
             # Override methods here
             credential = super().create_credential(*args, **kwargs)
             credential.my_custom_field = "my_custom_value"
-    
+
             # The caller is responsible for saving the credential
             return credential
 

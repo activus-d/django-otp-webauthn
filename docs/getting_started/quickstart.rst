@@ -83,7 +83,7 @@ However, if you’re configuring Django OTP WebAuthn for local development, use 
     OTP_WEBAUTHN_RP_ID = "localhost"
 
     # This is used to check the origin of the request and
-    # is used for security. It’s similar to 
+    # is used for security. It’s similar to
     # Django's CSRF_TRUSTED_ORIGINS setting.
     # The origins must always be a subdomain
     # of the RP ID or the RP ID itself.
@@ -112,13 +112,13 @@ Now add your Django OTP WebAuthn registration snippet into your project. For exa
 .. code-block:: html
 
     <!-- logged_in_template.html -->
-    {% load otp_webauthn %}    
+    {% load otp_webauthn %}
 
     {% comment %}
     This template is displayed when WebAuthn registration
     is supported. The template must contain a button
     with the id `passkey-register-button`. To display status
-    and error messages, include an element with the id 
+    and error messages, include an element with the id
     `passkey-register-status-message`.
     {% endcomment %}
     <template id="passkey-registration-available-template">
@@ -128,7 +128,7 @@ Now add your Django OTP WebAuthn registration snippet into your project. For exa
             </button>
             <div id="passkey-register-status-message"></div>
         </div>
-    </template>    
+    </template>
 
     {% comment %}
     This template is displayed when WebAuthn registration
@@ -136,14 +136,14 @@ Now add your Django OTP WebAuthn registration snippet into your project. For exa
     {% endcomment %}
     <template id="passkey-registration-unavailable-template">
         <p>Sorry, your browser has no Passkey support</p>
-    </template>    
+    </template>
 
     {% comment %}
     This placeholder element will be replaced with either the
     contents of the `passkey-registration-available-template` or
     the `passkey-registration-unavailable-template` template.
     {% endcomment %}
-    <span id="passkey-registration-placeholder"></span>    
+    <span id="passkey-registration-placeholder"></span>
 
     {% comment %}
     This template tag renders all the necessary <script> tags
@@ -166,19 +166,19 @@ Now modify your login template to enable passkey-based login:
         <label for="id_username">Username</label>
         <input id="id_username" type="text" name="username" autocomplete="username">
         {# Other fields omitted for brevity #}
-    
+
         {# This placeholder element will be replaced with either the
         contents of the `passkey-verification-available-template`
         or the `passkey-verification-unavailable-template` template. #}
         <span id="passkey-verification-placeholder"></span>
-    
+
         {% comment %}
         This template is displayed when WebAuthn authentication
         is supported. Typically, you would want to display a button
         that the user can click to authenticate using a passkey.
         The template must contain a button with the id
         `passkey-verification-button`. To display status and
-        error messages, include an element with the id 
+        error messages, include an element with the id
         `passkey-verification-status-message`.
         {% endcomment %}
         <template id="passkey-verification-available-template">
@@ -187,22 +187,22 @@ Now modify your login template to enable passkey-based login:
             </button>
             <div id="passkey-verification-status-message"></div>
         </template>
-    
+
         {% comment %}
         This template is displayed when WebAuthn is not supported.
         {% endcomment %}
         <template id="passkey-verification-unavailable-template">
             <p>Sorry, your browser has no Passkey support</p>
         </template>
-    
+
         {% comment %}
         This template tag renders all the necessary <script> tags
         for the default verification implementation.
-    
+
         To make browsers automatically suggest a passkey when you
         focus the username field, make sure `username_field_selector`
         is a valid CSS selector.
-    
+
         The username_field_selector parameter is only required to
         make 'passwordless authentication' work.
         {% endcomment %}

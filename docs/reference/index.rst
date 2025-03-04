@@ -15,7 +15,7 @@ Here’s what you’ll find in this section:
 
    .. grid-item-card:: :ref:`Helper <helper>`
 
-       Explore the :term:`WebAuthn` helper class to connect views, models, and py_webauthn. 
+       Explore the :term:`WebAuthn` helper class to connect views, models, and py_webauthn.
 
    .. grid-item-card:: :ref:`Models <models>`
 
